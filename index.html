@@ -7,7 +7,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/517cd31fd7.js" crossorigin="anonymous"></script>
 
    
@@ -19,7 +19,11 @@
  
   
     
-   
+    <button class="burger-btn">
+        <div class="burger-btn__box">
+            <div class="burger-icon"><i class="fas fa-bars"></i></div>
+        </div>
+    </button>
     <nav class="nav">
         <a href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
             <img src="./img/bb_white_logo.png" alt="logo" class="logo">
@@ -37,26 +41,32 @@
             </div>
             <a href="#program" class="nav__item">Program</a>
             <div class="dropdown">
-                <a href="#" class="dropdown-toggle">Wydarzenia</a>
+                <a href="#events" class="dropdown-toggle">Wydarzenia</a>
                 <div class="dropdown-menu">
                     <a href="components/adult.html">Turniej 5x5</a>
                     <a href="components/junior.html">Junior 3x3</a>
                     <a href="components/extreme.html">Extreme</a>
                     <a href="components/junior.html">Tattoo</a>
-                    <a href="components/extreme.html">BrokenFit</a>
-                    <a href="components/junior.html">BrokenParty</a>
-                    <a href="components/extreme.html">MidleParty</a>
+                    <a href="components/fit.html">BrokenFit</a>
+                    <a href="components/music.html">Koncerty</a>
+                    <a href="components/party.html">AfterParty</a>
+                    <a href="components/twokey.html">2k Sports</a>
+                    <a href="components/grafiti.html">Graffiti</a>
+                    <a href="components/shop.html">Shop</a>
                 </div>
             </div>
             <a href="components/gallery.html" class="nav__item">Galeria</a>
             <a href="#partners" class="nav__item">Partnerzy</a>
             <a href="#contact" class="nav__item">Kontakt</a>
         </div>
+        
         <div class="social-icons">
             <a href="https://www.facebook.com/brokenball" target="_blank" class="fab fa-facebook"></a>
             <a href="https://www.instagram.com/brokenball_official/" target="_blank" class="fab fa-instagram"></a>
             <a href="https://www.youtube.com/@tomaszwozniak9581" target="_blank" class="fab fa-youtube"></a>
         </div>
+        
+        
     </nav>
     
     
@@ -73,40 +83,8 @@
                 <h2 class="section-heading">Breaking News</h2>
 
 
-                <div class="news__box">
-                    <div class="news__box-img">
-                        <img src="./img/bb_18.jpg" alt="news" class="news__img">
-                        
-                    </div>
-                    <div class="news__box-text">
-                    <h3 class="news__title">🏀🔥To już oficjalne!</h3>
-                    <p class="news__text"> 18. Broken Ball ODBĘDZIE SIĘ (uff…) 27-29 czerwca🔥🏀
-                        18. edycja Broken Ball! Czyli wreszcie będziemy pełnoletni🤩, ale dalej tak samo pełni energii, pełni emocji i najlepszego klimatu. BB to coś więcej niż turniej – to koszykarska rodzina, vibe, którego nie znajdziesz nigdzie indziej i wydarzenie, na które czeka się cały rok!
-                        Koszykówka jest sercem Broken Ball, ale wokół niej bije puls wydarzeń, które tworzą magię tego weekendu. Eventy towarzyszące, street art, muzyka, nocne historie, których się nie opowiada – po prostu trzeba tu być i to przeżyć!
-                        📍 Dlatego zapiszcie datę: 27-29.06.2025 | IŁAWA 
-                        Ekipa, koszykówka, fity, skate, graffitti, tattoo, gastro, wszyscy razem – po prostu, Broken Ball! 🤜🤛
-                        Wy, my i osiemnastka, którą zapamiętamy na dłuuuugooooo🔥
-                        Obserwujcie, posyłajcie dalej, niech wszyscy się dowiedzą, że Broken Ball wchodzi w pełnoletniość, a jakie są osiemnastki… wszyscy wiemy😎🤫🔥🏀
-                        Więcej informacji soon!
-                       </p>
-                        
-                    </div>
-                    </div>
-                    <div class="news__box">
-                        <div class="news__box-img">
-                            <img src="./img/news.jpg" alt="news" class="news__img">
-                        </div>
-                        <div class="news__box-text">
-                        <h3 class="news__title">Zaczynamy</h3>
-                        <p class="news__text">Hej hej fani koszykówki i dobrej zabawy! 😎
-                            Stało się! Oficjalnie zaczynamy pracę nad kolejną edycją Broken Ball 🏀
-                            W tym roku stuknie nam osiemnastka❗🎉
-                            Chcemy, aby ta edycja była wyjątkowa pod każdym względem 💪
-                            Widzimy się nad Jeziorakiem już w czerwcu 2025! Dokładną datę podamy wkrótce. 
-                            Obserwujcie nasze social media 👊</p>
-                        </div>
-                    </div>
-                </div>
+                
+            </div>
                 <a href="components/news.html"  class="news__btn btn-special-animation">Więcej</a>
 
         </section>
@@ -114,9 +92,34 @@
         <section class="program hero-img section" id="program">
             <p class="hero-img__title shadow">Program wydarzenia</p>
         
-            <p class="hero-img__text shadow">Tutaj będzie wklejony program wydarzenia</p>
-           
+            <p class="hero-img__text shadow"><strong class="date">Piątek <br>27.06</strong></p>
+            <p class="hero-img__text shadow">Startujemy z pełnym impetem! Skatepark przejmuje ekipa Xtremalnego Broken Ball - hulajnoga,
+                BMX, deskorolka, styl, triki i zero strachu. Wieczorem, jeśli wszystko pójdzie zgodnie z planem,
+                dorzucimy do tego konkretny koncert. Trzymajcie kciuki, bo jak się uda, to będzie grubo.</p>
+        
+            <p class="hero-img__text shadow"><strong class="date">Sobota <br>28.06</strong></p>
+            <p class="hero-img__text shadow">Dzień totalnej sportowej petardy. Rano rusza Broken Fit Maraton, więc jeśli chcesz porządnie się
+                zmęczyć i wycisnąć ostatnie poty - to jest ten moment. Młodzi koszykarscy wariaci wchodzą na
+                boisko w Broken Ball Junior 3x3, a seniorzy odpalają turniej 5x5, który potrwa do niedzieli. Na
+                skateparku Xtremalny Broken Ball nie zwalnia tempa, a jeśli chcesz zabrać z Broken Ball coś na
+                całe życie - wbijaj do mobilnego studia Broken Tattoo by Deadly Needles.
+                Jeśli wolisz wirtualne emocje, to mamy dla Ciebie turniej Broken NBA 2K23 - szybka piłka,
+                zapisujesz się na miejscu, grasz i walczysz o tytuł mistrza konsoli. A wieczorem? Totalna klasyka -
+                
+                Broken Ball After Party w Przystani LEŚNA. Jeśli nie było Cię na afterze, to jakbyś w ogóle nie był
+                na BB.</p>
+        
+            <p class="hero-img__text shadow"><strong class="date">Niedziela<br>29.06</strong></p>
+            <p class="hero-img__text shadow">Ostateczne starcia w turnieju Broken Ball 5x5 - tu nie ma miejsca na błędy, zostają tylko najlepsi.
+                Na skateparku Xtremalny Broken Ball wjeżdża w finałowe rundy, a w Broken Tattoo by Deadly
+                Needles masz ostatnią szansę na dorzucenie sobie pamiątki pod skórę.
+                A to nie wszystko! W tym roku szykujemy dla Was <strong>nowe atrakcje</strong>, w tym specjalną <strong>strefę dla
+                dzieci</strong> - jeśli wiesz, to wiesz. Dorzucamy też <strong>sklepik Broken Ball</strong>, w którym znajdziesz rzeczy,
+                które chcesz mieć, ale jeszcze o tym nie wiesz. A na deser - <strong>niespodzianki</strong>, których nie
+                zdradzimy, bo wtedy to nie byłyby niespodzianki.
+                Zapisy, szczegóły i pełna rozpiska wkrótce - bądźcie czujni!</p>
         </section>
+        
 
 
         <section class="events section-padding section white-section" id="events">
@@ -132,10 +135,10 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Brokenball vol.18</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
-                                <li class="events__card-info-list-item">Koszykówka</li>
-                                <li class="events__card-info-list-item">Event</li>
+                                <li class="events__card-info-list-item">Oldschool</li>
+                                
                                 <li class="events__card-info-list-item">5x5</li>
                                 
                             </ul>
@@ -151,14 +154,14 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Broken Fit</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
                                 <li class="events__card-info-list-item">Fitness</li>
-                                <li class="events__card-info-list-item">maraton</li>
+                                <li class="events__card-info-list-item">Maraton</li>
                             
                             </ul>
 
-                            <button class="events__card-info-btn btn-special-animation">Więcej</button>
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/fit.html'">Więcej</button>
                         </div>
                     </div>  
 
@@ -168,11 +171,11 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Broken 3x3</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
                                 <li class="events__card-info-list-item">Turniej</li>
-                                <li class="events__card-info-list-item">3x3</li>
                                 <li class="events__card-info-list-item">Junior</li>
+                                <li class="events__card-info-list-item">3x3</li>
                                 
                             </ul>
 
@@ -188,14 +191,14 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Broken Tattoo</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
                                 <li class="events__card-info-list-item">Tatuaże</li>
                                 <li class="events__card-info-list-item">Dziary</li>
                                 
                             </ul>
 
-                            <button class="events__card-info-btn btn-special-animation">Więcej</button>
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/tattoo.html'">Więcej</button>
                         </div>
                     </div>  
 
@@ -206,7 +209,7 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Xtreme Broken</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
                                 <li class="events__card-info-list-item">Zawody</li>
                                 <li class="events__card-info-list-item">Sportów</li>
@@ -225,14 +228,14 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcejj</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Broken Music</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
-                                <li class="events__card-info-list-item">Muzyka</li>
-                                <li class="events__card-info-list-item">Wykonawcy</li>
-                                <li class="events__card-info-list-item">Koncert </li>
+                                <li class="events__card-info-list-item">Koncerty</li>
+                                <li class="events__card-info-list-item">Artyści</li>
+                                
                             </ul>
 
-                            <button class="events__card-info-btn btn-special-animation">Więcej</button>
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/music.html'">Więcej</button>
                         </div>
                     </div>  
 
@@ -243,7 +246,7 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Broken Party</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
                                 <li class="events__card-info-list-item">After Party</li>
                                 <li class="events__card-info-list-item">Impreza</li>
@@ -251,7 +254,7 @@
                                
                             </ul>
 
-                            <button class="events__card-info-btn btn-special-animation">Więcej</button>
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/party.html'">Więcej</button>
                         </div>
                     </div>  
 
@@ -262,7 +265,7 @@
                             <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
                         </div>
                         <div class="events__card-info">
-                            <h3 class="events__card-info-title">Broken Shop</h3>
+                            <h3 class="events__card-info-title"></h3>
                             <ul class="events__card-info-list">
                                 <li class="events__card-info-list-item">Koszulki</li>
                                 <li class="events__card-info-list-item">Czapki</li>
@@ -270,7 +273,43 @@
                                
                             </ul>
 
-                            <button class="events__card-info-btn btn-special-animation">Więcej</button>
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/shop.html'">Więcej</button>
+                        </div>
+                    </div>  
+
+                    <div class="events__card" onclick="void(0)">
+                        <div class="events__card-img events__card-img--ninth">
+                            <h3 class="events__card-img-title">Broken 2k</h3>
+                            <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
+                        </div>
+                        <div class="events__card-info">
+                            <h3 class="events__card-info-title"></h3>
+                            <ul class="events__card-info-list">
+                                <li class="events__card-info-list-item">Konsola </li>
+                                <li class="events__card-info-list-item">Wirtualne Emocje</li>
+                                
+                               
+                            </ul>
+
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/twokey.html'">Więcej</button>
+                        </div>
+                    </div>  
+
+                    <div class="events__card" onclick="void(0)">
+                        <div class="events__card-img events__card-img--tenth">
+                            <h3 class="events__card-img-title">Broken Graffiti</h3>
+                            <p class="events__card-img-info"><i class="fas fa-angle-double-right"></i>Więcej</p>
+                        </div>
+                        <div class="events__card-info">
+                            <h3 class="events__card-info-title"></h3>
+                            <ul class="events__card-info-list">
+                                <li class="events__card-info-list-item">Rysujemy</li>
+                                <li class="events__card-info-list-item">Murale</li>
+                                
+                               
+                            </ul>
+
+                            <button class="events__card-info-btn btn-special-animation" onclick="window.location.href='components/grafiti.html'">Więcej</button>
                         </div>
                     </div>  
 

@@ -32,57 +32,61 @@ body {
 //Nav 
 .burger-btn {
     display: none;
-    position: absolute;
-    transform: translateX(-50%);
-    right: 10px;
-    padding: 1em;
+    position: fixed; 
+    top: 3px; 
+    right: 10px; 
     background: none;
     border: 1px solid transparent;
     cursor: pointer;
-    z-index: 9999;
-    
-   
+    z-index: 1001;
 
     &:focus {
         outline: none;
-        border:1px solid rgba(255,255,255, .5);
+        border: 1px solid rgba(255,255,255, 0.5);
         border-radius: 8px;
     }
+
     &:hover {
-        .burger-btn__bars::after, .burger-btn__bars::before{
+        .burger-btn__bars::after, .burger-btn__bars::before {
             width: 100%;
         }
     }
 
-    &__box{
+    &.active {
+        border: 1px solid rgba(255, 255, 255, 0.5); 
+        background-color: rgba(0, 0, 0, 0.1); 
+    }
+
+
+
+    &__box {
         position: relative;
         width: 40px;
-        height: 30px;
-        background-image: url('../img/bb_white_logo.png');
-         background-size: cover;
-        background-position: center ;
-        background-attachment: fixed;
+        height: 35px;
 
-        &__bars, &__bars::after, &__bars::before{
-            @include burgerBtn;
-        }
 
-        &__bars{
-            width: 100%;
-
-            &::after{
-                top: 13px;
-                width: 60%;
-
-            }
-            &::before{
-                top: 27px;
-                width: 30%;
+        .burger-icon {
+    
+            position: fixed;
+            align-items: center;
+            top: 10px;
+            right: 20px;
+            font-size: 24px; 
+            color: $pure-white; 
+            cursor: pointer;
+            z-index: 1001;
+        
+            &:hover {
+                color: $main-color; 
             }
         }
+
+       
+
+       
     }
-   
 }
+
 
 .nav {
     position: fixed;
@@ -92,10 +96,12 @@ body {
     height: 40px;
     background-color: black;
     display: flex;
-    justify-content: space-between; /* Elementy rozstawione */
+    justify-content: space-between; 
     align-items: center;
     z-index: 1000;
     padding: 0 20px;
+
+    
 
     .logo {
     position: absolute; 
@@ -188,10 +194,7 @@ body {
 
     }
 }
-// .nav__items .dropdown > a:hover {
-//     color: $pure-white; /* Zachowuje oryginalny kolor */
-//     border-bottom: none;
-// }
+
 
 //header 
 .header {
@@ -307,20 +310,23 @@ body {
 
     &__btn {
         display: flex;
-        position: absolute;
-        justify-content: center;
-        right: 43vw;
-        background: $pure-white;
-        margin-top: 1em;
-        padding: 0.1em .4em;
-        font-size: 0.2em;
-        border: none;
-        border-radius: 10px;
-        color: $dark;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-size: 1.8rem;
-        cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0; /* Przyciśnij przycisk do dołu kontenera */
+    left: 50%; /* Wyśrodkuj przycisk w poziomie */
+    transform: translateX(-50%); /* Przesuń o połowę szerokości, żeby go wyśrodkować */
+    background: $pure-white;
+    margin-top: 1em;
+    padding: 0.1em .4em;
+    font-size: 0.2em;
+    border: none;
+    border-radius: 10px;
+    color: $dark;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor: pointer;
 
         &::before {
             background-color: $main-color;
@@ -366,6 +372,13 @@ body {
     &__text{
         padding: 1em 0;
     }
+    
+    .date {
+        font-size: 1.4rem; 
+        display: block; 
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+    }
   
 }
 
@@ -400,30 +413,20 @@ body {
             background-size: cover;
             transition: transform 1s, opacity 1s;
 
-            &--first {
+            &--first,
+            &--second,
+            &--third,
+            &--fourth,
+            &--fifth,
+            &--sixth,
+            &--sixth, 
+            &--seventh,
+            &--eight,
+            &--ninth,
+            &--tenth {
                 background-image: $orange-gradient, url('../img/news.jpg');
             }
-            &--second {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
-            &--third {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
-            &--fourth {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
-            &--fifth {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
-            &--sixth {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
-            &--seventh {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
-            &--eight {
-                background-image: $orange-gradient, url('../img/news.jpg');
-            }
+           
 
             &-title {
                 font-size: 2.8rem;
@@ -502,13 +505,17 @@ body {
         
     }
 }
-//fiveOnFive
+
 
 .fiveOnFive, .junior {
 
-    
+    h3{
+        text-align: center;
+    }
     p {
         text-align: center;
+        letter-spacing: 0.5px;
+        
 
     }
     a {
@@ -559,22 +566,22 @@ body {
             transition: transform 1s, opacity 1s;
 
             &--first {
-                background-image: $orange-gradient, url('../img/broken_logo_16.jpg');
-            }
-            &--second {
                 background-image: $orange-gradient, url('../img/broken_logo_17.jpg');
             }
-            &--third {
+            &--second {
                 background-image: $orange-gradient, url('../img/broken_logo_16.jpg');
             }
+            &--third {
+                background-image: $orange-gradient, url('../img/broken_logo_15.jpg');
+            }
             &--fourth {
-                background-image: $orange-gradient, url('../img/news.jpg');
+                background-image: $orange-gradient, url('../img/broken_logo_14.jpg');
             }
             &--fifth {
-                background-image: $orange-gradient, url('../img/news.jpg');
+                background-image: $orange-gradient, url('../img/broken_logo_13.png');
             }
             &--sixth {
-                background-image: $orange-gradient, url('../img/news.jpg');
+                background-image: $orange-gradient, url('../img/broken_logo_12.jpg');
             }
             &--seventh {
                 background-image: $orange-gradient, url('../img/news.jpg');
@@ -745,6 +752,7 @@ footer {
             justify-content: space-between;
             
         }
+
     }
 
     .events, 
@@ -797,6 +805,13 @@ footer {
             justify-content: center;
             align-items: center;
         }
+
+        &__btn {
+            right: 34vw;
+                
+        
+               
+        }
         
         img {
             width: 60vw;
@@ -847,9 +862,44 @@ footer {
 }
 @media (max-width: 767px) {  
     .burger-btn {
-        display: block !important;
+        display: flex !important;
       
     }
+    .social-icons{
+        padding-right: 25px;
+    }
+
+    .nav__items {
+        display: none; /* Domyślnie ukryte */
+        position: fixed !important; /* Ważne, aby menu zajmowało cały ekran */
+        top: 0;
+        left: 0;
+        width: 100vw !important; /* Pełna szerokość */
+        height: 100vh !important; /* Pełna wysokość */
+        background: rgba(0, 0, 0, 0.95); /* Lekko przezroczyste tło */
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        z-index: 1001; /* Nad wszystkimi elementami */
+        padding: 0;
+    }
+
+    .nav__items.show {
+        display: flex !important; 
+    }
+
+    .nav__items a {
+        color: white;
+        font-size: 32px !important; /* Powiększamy czcionkę */
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 15px 0;
+        display: block;
+        transition: color 0.3s;
+    }
+
+    
 }
 
 @media(min-width: 768px) {
