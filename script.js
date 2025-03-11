@@ -131,267 +131,53 @@ document.addEventListener("DOMContentLoaded", function () {
         .catch(error => console.error("Błąd ładowania newsów:", error));
 });
 
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
+document.addEventListener("DOMContentLoaded", function () {
+    fetch("../news.json")
         .then(response => response.json())
         .then(data => {
-            const juniorNews = data.filter(news => news.tags.includes("junior"));
-            const container = document.getElementById("junior-news");
+            const categories = [
+                { tag: "junior", containerId: "junior-news" },
+                { tag: "main", containerId: "main-news" },
+                { tag: "extreme", containerId: "extreme-news" },
+                { tag: "fit", containerId: "fit-news" },
+                { tag: "graffiti", containerId: "graffiti-news" },
+                { tag: "music", containerId: "music-news", emptyMessage: "Brak wydarzeń muzycznych na ten moment." },
+                { tag: "party", containerId: "party-news" },
+                { tag: "shop", containerId: "shop-news" },
+                { tag: "tattoo", containerId: "tattoo-news" },
+                { tag: "2k", containerId: "twokey-news" }
+            ];
 
-            juniorNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const mainNews = data.filter(news => news.tags.includes("main"));
-            const container = document.getElementById("main-news");
-
-            mainNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const extremeNews = data.filter(news => news.tags.includes("extreme"));
-            const container = document.getElementById("extreme-news");
-
-            extremeNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const fitNews = data.filter(news => news.tags.includes("fit"));
-            const container = document.getElementById("fit-news");
-
-            fitNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const graffitiNews = data.filter(news => news.tags.includes("graffiti"));
-            const container = document.getElementById("graffiti-news");
-
-            graffitiNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const musicNews = data.filter(news => news.tags.includes("music")); 
-            const container = document.getElementById("music-news");
-
-            if (musicNews.length === 0) {
-                container.innerHTML = "<p>Brak wydarzeń muzycznych na ten moment.</p>";
-                return;
-            }
-
-            musicNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
+            categories.forEach(({ tag, containerId, emptyMessage }) => {
+                renderNews(data, tag, containerId, emptyMessage);
             });
         })
         .catch(error => console.error("Błąd wczytywania newsów:", error));
 });
 
+function renderNews(data, tag, containerId, emptyMessage = null) {
+    const filteredNews = data.filter(news => news.tags.includes(tag));
+    const container = document.getElementById(containerId);
 
+    if (!container) return; 
+    if (filteredNews.length === 0 && emptyMessage) {
+        container.innerHTML = `<p>${emptyMessage}</p>`;
+        return;
+    }
 
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const partyNews = data.filter(news => news.tags.includes("party"));
-            const container = document.getElementById("party-news");
-
-            partyNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const shopNews = data.filter(news => news.tags.includes("shop"));
-            const container = document.getElementById("shop-news");
-
-            shopNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const tattooNews = data.filter(news => news.tags.includes("tattoo"));
-            const container = document.getElementById("tattoo-news");
-
-            tattooNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    fetch("../news.json") 
-        .then(response => response.json())
-        .then(data => {
-            const twokeyNews = data.filter(news => news.tags.includes("2k"));
-            const container = document.getElementById("twokey-news");
-
-            twokeyNews.forEach(news => {
-                const newsBox = document.createElement("div");
-                newsBox.classList.add("news__box");
-                newsBox.innerHTML = `
-                    <div class="news__box-img">
-                        <img src="${news.image}" alt="news" class="news__img">
-                    </div>
-                    <div class="news__box-text">
-                        <h3 class="news__title">${news.title}</h3>
-                        <h4 class="news__date">${news.date}</h4>
-                        <p class="news__text">${news.text}</p>
-                    </div>
-                `;
-                container.appendChild(newsBox);
-            });
-        });
-});
+    filteredNews.forEach(news => {
+        const newsBox = document.createElement("div");
+        newsBox.classList.add("news__box");
+        newsBox.innerHTML = `
+            <div class="news__box-img">
+                <img src="${news.image}" alt="news" class="news__img">
+            </div>
+            <div class="news__box-text">
+                <h3 class="news__title">${news.title}</h3>
+                <h4 class="news__date">${news.date}</h4>
+                <p class="news__text">${news.text}</p>
+            </div>
+        `;
+        container.appendChild(newsBox);
+    });
+}
