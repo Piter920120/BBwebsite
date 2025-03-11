@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Junior 3x3 - Nowe zapisy!",
+    "date": "2025-03-10",
+    "text": "Zaczynamy zapisy do Junior 3x3! Nie czekaj, zgłoś drużynę! Dla wszystkich graczy under 15",
+    "image": "../img/bb_junior.png",
+    "tags": ["junior"]
+},
+    {
+        "title": "Zaczynamy",
+        "date": "2025-03-11",
+        "image": "../img/wu.jpg",
+        "text": "Hej hej fani koszykówki i dobrej zabawy!Hej hej fani koszykówki i dobrej zabawy!Hej hej fani koszykówki i dobrej zabawy! ",
+        "tags": ["general"]
+      },
+    {
+      "title": "🏀🔥To już oficjalne!",
+      "date": "2025-03-04",
+      "image": "../img/bb_18.jpg",
+      "text": "18. Broken Ball ODBĘDZIE SIĘ (uff…) 27-29 czerwca🔥🏀 18. edycja Broken Ball! Czyli wreszcie będziemy pełnoletni🤩, ale dalej tak samo pełni energii, pełni emocji i najlepszego klimatu. BB to coś więcej niż turniej – to koszykarska rodzina, vibe, którego nie znajdziesz nigdzie indziej i wydarzenie, na które czeka się cały rok!",
+      "tags": ["general"]
+    },
+    {
+      "title": "Zaczynamy",
+      "date": "2025-01-31",
+      "image": "../img/news.jpg",
+      "text": "Hej hej fani koszykówki i dobrej zabawy! 😎 Stało się! Oficjalnie zaczynamy pracę nad kolejną edycją Broken Ball 🏀 W tym roku stuknie nam osiemnastka❗🎉",
+      "tags": ["general"]
+    }
+  ]

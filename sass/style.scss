@@ -303,22 +303,38 @@ body {
         margin-bottom: 0.5em; 
     }
 
+    &__date{
+        font-size: 0.8em;
+        font-style: italic;
+        color: $dark;
+        margin-bottom: 0.5em;
+    }
+
     &__text{
         font-size: 0.9rem;
        
     }
+    &__tags {
+        margin-bottom: 5px;
+        font-size: 8px;
+        color: #717070;
+    }
+    
+   
+    
 
     &__btn {
-        display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom: 0; /* Przyciśnij przycisk do dołu kontenera */
-    left: 50%; /* Wyśrodkuj przycisk w poziomie */
-    transform: translateX(-50%); /* Przesuń o połowę szerokości, żeby go wyśrodkować */
+    bottom: 0; 
+    left: 50%; 
+    transform: translateX(-50%);
     background: $pure-white;
     margin-top: 1em;
     padding: 0.1em .4em;
+    margin-bottom: 20px;
     font-size: 0.2em;
     border: none;
     border-radius: 10px;
@@ -507,26 +523,38 @@ body {
 }
 
 
-.fiveOnFive, .junior {
+.fiveOnFive, 
+.junior,
+.extreme,
+.fit,
+.graffiti,
+.music,
+.party,
+.shop,
+.tattoo,
+.twokey {
 
-    h3{
+    &__tittle{
         text-align: center;
     }
-    p {
+    &__text {
         text-align: center;
         letter-spacing: 0.5px;
         
 
+
     }
     a {
         display: flex;
-        justify-content: center; /* W poziomie */
-        align-items: center; /* W pionie */
+        justify-content: center; 
+        align-items: center; 
         height: 100px; 
         text-decoration: none;
         color: $main-color;
         
     }
+
+   
 }
 //history 
 
@@ -622,73 +650,20 @@ body {
 .partners{
 
 
-    &__cards{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-       
-
-        &__card{
-            position: relative;
-            margin: 1em 0;
-            height: 250px;
-            width: 20%;
-            max-width: 250px;      
-            color: $pure-white;
-            text-align: center;
-
-
-            &-img{
-                padding: 2em;
-                height: 100%;
-                border-radius: 8px;
-                background-size: cover;
-         
+    &__box {
+        background-image: url(../img/bb_partners.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 440px; 
+        
+    }
         
 
-                &--one{
-                    background-image: url('../../img/tiffi.png');
 
-                
-                }
-            &--two{
-                background-image: url('./img/news.jpg');
-                
-            }
-            &--three{
-                background-image: url('./img/news.jpg');
-                
-            }
-            &--four{
-                background-image: url('./img/news.jpg');
-                
-            }
-            &--five{
-                background-image: url('./img/news.jpg');
-                
-            }
-            &--six{
-                background-image: url('./img/news.jpg');
-                
-            }
-            &--seven{
-                background-image: url('./img/news.jpg');
-                
-            }
-
-            &--eight{
-                background-image: url('./img/news.jpg');
-                
-            }
-            &--nine{
-                background-image: url('./img/news.jpg');
-                
-            }
-        }
-
-
-        }
-    }
+        
+    
 }
 
 //contact
@@ -745,6 +720,16 @@ footer {
 
 
 //Media
+
+@media(max-width: 450px)
+{
+    .partners{
+        &__box{
+            background-size: contain;
+        }
+    }
+}
+
 @media(min-width: 576px) {
     .news{
         &__box{
@@ -791,8 +776,14 @@ footer {
             }
         }
 
-       
         
+        
+    }
+
+    .partners{
+        &__box{
+            background-size: contain;
+        }
     }
 }
 
@@ -808,6 +799,9 @@ footer {
 
         &__btn {
             right: 34vw;
+            font-size: 15px;
+
+          
                 
         
                
@@ -859,6 +853,12 @@ footer {
        
         
     }
+    .partners{
+        &__box{
+            background-size: contain;
+        }
+    }
+
 }
 @media (max-width: 767px) {  
     .burger-btn {
@@ -870,18 +870,18 @@ footer {
     }
 
     .nav__items {
-        display: none; /* Domyślnie ukryte */
-        position: fixed !important; /* Ważne, aby menu zajmowało cały ekran */
+        display: none; 
+        position: fixed !important; 
         top: 0;
         left: 0;
-        width: 100vw !important; /* Pełna szerokość */
-        height: 100vh !important; /* Pełna wysokość */
-        background: rgba(0, 0, 0, 0.95); /* Lekko przezroczyste tło */
+        width: 100vw !important; 
+        height: 100vh !important; 
+        background: rgba(0, 0, 0, 0.95); 
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        z-index: 1001; /* Nad wszystkimi elementami */
+        z-index: 1001; 
         padding: 0;
     }
 
@@ -890,15 +890,15 @@ footer {
     }
 
     .nav__items a {
-        color: white;
-        font-size: 32px !important; /* Powiększamy czcionkę */
+        color: $pure-white;
+        font-size: 32px !important; 
         text-transform: uppercase;
         text-decoration: none;
         padding: 15px 0;
         display: block;
         transition: color 0.3s;
     }
-
+   
     
 }
 
@@ -960,6 +960,12 @@ footer {
             width: 29%;
         }
     }
+    .partners{
+        &__box{
+            background-size: cover;
+        }
+    }
+   
 }
 
 
@@ -987,6 +993,10 @@ footer {
         }
     }
 
-    
+    .partners{
+        &__box{
+            height: 600px;
+        }
+    }
     
 }
